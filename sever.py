@@ -36,7 +36,7 @@ with st.form("my_form"):
       name=st.session_state['name']
       number=st.session_state['number']
       st.write(f'已提交:姓名為{name},姓名代號為{number}')
-      ttext=(f'{room},{date},{time},{name},{number}')
+      ttext=('{room},{date},{time},{name},{number}')
       import requests
       url = 'https://script.google.com/macros/s/AKfycbzsykcqzdQ3gz6IbGj26ybhN4Py98OG-PQ-g4nsNHGwgbfa-ORY-QjZ5vcR1ScgMKvQPg/exec'
       params = {
