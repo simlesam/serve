@@ -35,12 +35,12 @@ with st.form("my_form"):
       time=st.session_state['time']
       name=st.session_state['name']
       number=st.session_state['number']
-      st.write(f'已提交:姓名為{name},姓名代號為{number}')
+      ttext=st.write(f'已提交:姓名為{name},姓名代號為{number}')
       import requests
       url = 'https://script.google.com/macros/s/AKfycbzsykcqzdQ3gz6IbGj26ybhN4Py98OG-PQ-g4nsNHGwgbfa-ORY-QjZ5vcR1ScgMKvQPg/exec'
       params = {
           'name':'工作表1',
           'top':'true',
-          'data':(f'{room},{date},{time},{name},{number}')
+          'data':'[ttext]'
           }
       web = requests.get(url=url, params=params)
