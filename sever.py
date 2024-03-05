@@ -41,6 +41,6 @@ with st.form("my_form"):
       params = {
           'name':'工作表1',
           'top':'true',
-          'data':'[789,123,456,name,number]'
+          'data':'{room},{date},{time},{name},{number}'
           }
       web = requests.get(url=url, params=params)
